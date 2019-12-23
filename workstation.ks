@@ -42,7 +42,7 @@ xconfig --startxonboot
 timezone Australia/Sydney
 
 # Create User Account
-user --name=sina --password=$userpass --iscrypted --groups=wheel
+# user --name=sina --password=$userpass --iscrypted --groups=wheel
 
 # Set Root Password
 rootpw --lock
@@ -118,6 +118,7 @@ nodejs
 icedtea-web
 ristretto
 argon2
+docker
 %end
 
 # Post-installation Script
