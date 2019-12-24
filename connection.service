@@ -1,0 +1,9 @@
+[Unit]
+Description = making network connection up
+After = docker.service
+
+[Service]
+ExecStart = /root/scripts/conup.sh
+
+[Install]
+WantedBy = multi-user.target
