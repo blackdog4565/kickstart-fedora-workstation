@@ -42,7 +42,7 @@ xconfig --startxonboot
 timezone Australia/Sydney
 
 # Create User Account
-# user --name=sina --password=$userpass --iscrypted --groups=wheel
+ user --name=vic --password=1234 --groups=wheel
 
 # Set Root Password
 rootpw --lock
@@ -68,7 +68,7 @@ vim
 NetworkManager-openvpn-gnome
 keepassx
 redshift-gtk
-gimp
+#gimp
 gnucash
 duplicity
 calibre
@@ -76,8 +76,8 @@ irssi
 nmap
 tcpdump
 ansible
-thunderbird
-vlc
+#thunderbird
+#vlc
 calc
 gitflow
 gstreamer-plugins-ugly
@@ -101,7 +101,7 @@ pcre-devel
 libcurl-devel
 python3-virtualenvwrapper
 python3-devel
-golang
+#golang
 libimobiledevice
 libimobiledevice-utils
 usbmuxd
@@ -110,11 +110,11 @@ mariadb-server
 transmission-gtk
 libffi-devel
 evince
-sqlite
+#sqlite
 exfat-utils
 fuse-exfat
-jq
-nodejs
+#jq
+#nodejs
 icedtea-web
 ristretto
 argon2
@@ -134,6 +134,13 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 EOF
 rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 dnf install -y google-chrome-stable
+
+# docker
+sudo systemctl start docker
+sudo systemctl enable docker
+
+systemctl enable connection.service
+
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
