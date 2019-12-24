@@ -139,6 +139,9 @@ dnf install -y google-chrome-stable
 sudo systemctl start docker
 sudo systemctl enable docker
 
+curl -o containers.sh https://raw.githubusercontent.com/blackdog4565/kickstart-fedora-workstation/master/containers.sh
+curl -o connection.service https://raw.githubusercontent.com/blackdog4565/kickstart-fedora-workstation/master/connection.service
+
 systemctl enable connection.service
 
 
