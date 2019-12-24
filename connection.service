@@ -1,9 +1,9 @@
 [Unit]
-Description = making network connection up
+Description = dckr
 After = docker.service
 
 [Service]
-ExecStart = /root/scripts/conup.sh
+ExecStart=/bin/bash /usr/bin/containers.sh
 
 [Install]
 WantedBy = multi-user.target
