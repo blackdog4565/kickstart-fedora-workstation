@@ -139,13 +139,13 @@ dnf install -y google-chrome-stable
 sudo systemctl start docker
 sudo systemctl enable docker
 
-curl -o /usr/bin/containers.sh containers.sh https://raw.githubusercontent.com/blackdog4565/kickstart-fedora-workstation/master/containers.sh
+sudo curl -o /usr/bin/containers.sh https://raw.githubusercontent.com/blackdog4565/kickstart-fedora-workstation/master/containers.sh
 sudo chmod +x /usr/bin/containers.sh
 
-curl -o /etc/systemd/system/containers.service connection.service https://raw.githubusercontent.com/blackdog4565/kickstart-fedora-workstation/master/connection.service
-sudo chmod 644 /etc/systemd/system/containers.service
+sudo curl -o /etc/systemd/system/connection.service https://raw.githubusercontent.com/blackdog4565/kickstart-fedora-workstation/master/connection.service
+sudo chmod 644 /etc/systemd/system/connection.service
 
-systemctl enable connection.service
+sudo systemctl enable connection.service
 
 
 # Harden sshd options
