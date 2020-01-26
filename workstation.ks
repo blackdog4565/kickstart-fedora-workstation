@@ -146,7 +146,7 @@ sudo curl -o /etc/systemd/system/connection.service https://raw.githubuserconten
 sudo chmod 644 /etc/systemd/system/connection.service
 
 sudo systemctl enable connection.service
-%end
+
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
