@@ -1,5 +1,6 @@
 [Unit]
 Description = dckr
+Requires=docker.service
 After = docker.service
 
 [Service]
